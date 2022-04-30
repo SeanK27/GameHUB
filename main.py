@@ -184,7 +184,7 @@ while True:
 
   if selection == 4:  ######################PASTRY ACTUATOR########################
     pygame.mixer.pre_init()
-    pygame.mixer.music.load("Music/Erika.mp3")
+    pygame.mixer.music.load("Music/bangarang.mp3")
     pygame.mixer.music.play(-1)
     edp445 = pygame.image.load("Logo/edp455.jpg")
     screen.blit(edp445, (350,150))
@@ -205,8 +205,6 @@ while True:
             show_text("Pastry Actuations: " + str(totala), 0, 0, white)
             pygame.display.update()
 
-
-      
   if selection == 5: ####################SKAAVOK###################
     show_text("skaavok", 0, 0, white)
   if selection == 6: #####################WORM#####################
