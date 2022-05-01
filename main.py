@@ -1,3 +1,5 @@
+import pygame
+
 from Title import *
 
 pink = (255, 200, 200)
@@ -38,15 +40,18 @@ def show_text(msg, xp, yp, color):
     fontobj = pygame.font.SysFont("freesans", 32)
     msgobj = fontobj.render(msg, False, color)
     screen.blit(msgobj, (xp, yp))
-def gototitle():
-    
+def quitwesc(): ######ONLY WORK IF IN EVENT LOOP#######
+    if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
+        selection = 0
+        print("escape")
+def escapescreen():
+    print("")
 
 while True:
     pygame.display.update()
     if selection == 0:  ###################TITLE###########################
         drawTitle()
         pygame.display.update()
-        time.sleep(1)
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 x, y = event.pos
@@ -113,20 +118,24 @@ while True:
 
     if selection == 2:
         show_text("NFTS", 0, 0, white)
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
+                selection = 0
+                print("escape")
     if selection == 3:  ############################PING######################
-        while True:
+        while selection == 3:
             if p1scorep == 5:
                 screen.fill(black)
                 show_text("WINNER", 40, 10, white)
                 pygame.display.update()
                 time.sleep(2)
-                quit()
+                selection = 1 #title
             if p2scorep == 5:
                 screen.fill(black)
                 show_text("WINNER", 870, 10, white)
                 pygame.display.update()
                 time.sleep(2)
-                quit()
+                selection = 1 #title
             pygame.display.update()
             screen.fill(black)
             show_text("Score:" + str(p1scorep), 40, 10, white)
@@ -196,8 +205,11 @@ while True:
         screen.blit(edp445, (350, 150))
         show_text("Pastry Actuations: " + str(totala), 0, 0, white)
         pygame.display.update()
-        while True:
+        while selection == 4:
             for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
+                    selection = 0
+                    print("escape")
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     xa, ya = event.pos
                     # print("coords:")
@@ -214,5 +226,13 @@ while True:
 
     if selection == 5:  ####################SKAAVOK###################
         show_text("skaavok", 0, 0, white)
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
+                selection = 0
+                print("escape")
     if selection == 6:  #####################WORM#####################
         show_text("worm", 0, 0, white)
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
+                selection = 0
+                print("escape")
