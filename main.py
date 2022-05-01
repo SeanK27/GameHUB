@@ -189,6 +189,7 @@ while True:
     edp445 = pygame.image.load("Logo/edp455.jpg")
     screen.blit(edp445, (350,150))
     show_text("Pastry Actuations: " + str(totala), 0, 0, white)
+    clicka = pygame.mixer.Sound("Music/click.wav")
     pygame.display.update()
     while True:
       for event in pygame.event.get():
@@ -199,6 +200,7 @@ while True:
           # print("y:"+str(ya))
           # print(totala)
           if xa>=350 and xa<=650 and ya>=150 and ya<=450:
+            pygame.mixer.Sound.play(clicka)
             totala += 1
             screen.fill(black)
             screen.blit(edp445, (350,150))
