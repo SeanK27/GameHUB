@@ -32,6 +32,7 @@ displayscorea=""
 pygame.mixer.pre_init()
 pygame.mixer.music.load("Music/GloriousSound.mp3")
 pygame.mixer.music.play(-1)
+pygame.mixer.music.set_volume(0.5)
 ## 0: title screen; 1:game selection; 2: nft market; 3: ping; 4: pastryactuator; 5: skaavok; 6:worm
 selection=0 
 
