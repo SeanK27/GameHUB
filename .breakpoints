@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    ".gitignore": [
+      {
+        "id": "02e40a5c-71cf-4e0c-b5c6-3e42a49f5c2a",
+        "line": 3,
+        "version": 139,
+        "index": 27
+      }
+    ]
+  }
 }
