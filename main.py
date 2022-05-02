@@ -34,18 +34,13 @@ pygame.mixer.music.set_volume(0.1)
 click = pygame.mixer.Sound("Music/click.wav")
 ## 0: title screen; 1:game selection; 2: nft market; 3: ping; 4: pastryactuator; 5: skaavok; 6:worm
 selection = 0
+titleLogo = pygame.image.load("Logo/titleLogo.png")
 
 
 def show_text(msg, xp, yp, color):
     fontobj = pygame.font.SysFont("freesans", 32)
     msgobj = fontobj.render(msg, False, color)
     screen.blit(msgobj, (xp, yp))
-def quitwesc(): ######ONLY WORK IF IN EVENT LOOP#######
-    if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
-        selection = 0
-        print("escape")
-def escapescreen():
-    print("")
 
 while True:
     pygame.display.update()
@@ -53,6 +48,9 @@ while True:
         drawTitle()
         pygame.display.update()
         for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
+                print("quitting")
+                quit()
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 x, y = event.pos
                 # print("coords:")
@@ -66,7 +64,7 @@ while True:
                     y = 0
                     selection = 1  # go to game selection
                     print("going to game selection")
-                if 333 <= x <= 666 and 450 <= y <= 550:
+                if 333 <= x <= 666 and 430 <= y <= 530:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
                     pygame.display.update()
@@ -78,6 +76,9 @@ while True:
     if selection == 1:  #####################SELECT SCREEN###################
         drawSelect()
         for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
+                selection = 0
+                print("escape")
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 x, y = event.pos
                 # print("coords:")
@@ -146,6 +147,8 @@ while True:
             pygame.draw.line(screen, white, (500, 0), (500, 600), 5)
             for event in pygame.event.get():
                 if event.type == KEYDOWN:
+                    if event.key == K_ESCAPE:
+                        selection = 0
                     if event.key == K_w:
                         acp = -2
                     if event.key == K_DOWN:

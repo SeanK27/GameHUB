@@ -14,13 +14,15 @@ colors=[pink,blue,green]
 pygame.init()
 screen = pygame.display.set_mode((1000,600))
 pygame.display.set_caption("window")
+titleLogo = pygame.image.load("Logo/titleLogo.png")
 
 
 def drawTitle():
   screen.fill(black)
   pygame.display.set_caption("window")
   pygame.draw.rect(screen, white, (333, 266, 333, 100))
-  pygame.draw.rect(screen, white, (333, 450, 333, 100))
+  pygame.draw.rect(screen, white, (333, 430, 333, 100))
+  screen.blit(titleLogo, (250, 30))
   pygame.display.update()
 
 def drawSelect():
@@ -29,13 +31,4 @@ def drawSelect():
   pygame.draw.rect(screen, white, (143, 400, 286, 100))
   pygame.draw.rect(screen, white, (572, 200, 286, 100))
   pygame.draw.rect(screen, white, (572, 400, 286, 100))
-  pygame.display.update()         
-'''
-  while True:
-    for event in pygame.event.get():
-      if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-        x,y=event.pos
-        print("coords:")
-        print(x)
-        print(y)
-'''
+  pygame.display.update()
