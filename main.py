@@ -7,6 +7,7 @@ blue = (0, 0, 255)
 green = (0, 255, 0)
 black = (0, 0, 0)
 white = (255, 255, 255)
+orange = (255, 165, 0)
 colors = [pink, blue, green]
 pygame.init()
 screen = pygame.display.set_mode((1000, 600))
