@@ -12,11 +12,19 @@ orange = (255, 165, 0)
 
 x=0
 y=0
-colors=[pink,blue,green]
+colors=[pink,blue,green,white]
 pygame.init()
 screen = pygame.display.set_mode((1000,600))
 pygame.display.set_caption("window")
 titleLogo = pygame.image.load("Logo/titleLogo.png")
+playButton = pygame.image.load("Logo/play.png")
+nftButton = pygame.image.load("Logo/nft.png")
+
+pingLogo = pygame.image.load("Logo/ping.png")
+aimLogo = pygame.image.load("Logo/aim.png")
+wormLogo = pygame.image.load("Logo/worm.png")
+pastryLogo = pygame.image.load("Logo/pastry.png")
+
 
 def show_text(msg, xp, yp, color):
   fontobj = pygame.font.SysFont("comicsans", 32)
@@ -29,22 +37,22 @@ def show_text(msg, xp, yp, color):
 def drawTitle():
   screen.fill(black)
   pygame.display.set_caption("window")
-  pygame.draw.rect(screen, white, (333, 266, 333, 100))
-  show_text("PLAY", 333, 266, black)
-  pygame.draw.rect(screen, white, (333, 430, 333, 100))
-  show_text("NFTs", 333, 430, black)
+  screen.blit(playButton, (333,266))
+  screen.blit(nftButton, (333,430))
   screen.blit(titleLogo, (250, 30))
+
+  ##asthetics
+
+  
   pygame.display.update()
 
 def drawSelect():
   screen.fill(black)
-  pygame.draw.rect(screen, white, (143, 200, 286, 100))
-  show_text("PING", 143, 200, black)
-  pygame.draw.rect(screen, white, (143, 400, 286, 100))
-  show_text("SKAAVOK", 143, 400, black)
-  pygame.draw.rect(screen, white, (572, 200, 286, 100))
-  show_text("PASTRY", 572, 200, black)
-  show_text("ACTUATOR", 572, 240, black)
-  pygame.draw.rect(screen, white, (572, 400, 286, 100))
-  show_text("WORM", 572, 400, black)
+  screen.blit(titleLogo, (250, 30))
+  pygame.draw.rect(screen,white,(20,20,100,35),1)
+  
+  screen.blit(pingLogo, (143,270))
+  screen.blit(aimLogo, (143,400))
+  screen.blit(pastryLogo, (572,270))
+  screen.blit(wormLogo, (572,400))
   pygame.display.update()

@@ -85,7 +85,7 @@ while True:
                 # print("coords:")
                 # print("x:"+str(x))
                 # print("y:"+str(y))
-                if 143 <= x <= 429 and 200 <= y <= 300:
+                if 143 <= x <= 429 and 270 <= y <= 370:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
                     pygame.display.update()
@@ -101,7 +101,7 @@ while True:
                     y = 0
                     selection = 5  # go to skaavok
                     print("going to skaavok")
-                if 572 <= x <= 858 and 200 <= y <= 300:
+                if 572 <= x <= 858 and 270 <= y <= 370:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
                     pygame.display.update()
