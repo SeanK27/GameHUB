@@ -62,6 +62,12 @@ while True:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
                     pygame.display.update()
+                    titlePlay()
+                    pygame.display.update()
+                    time.sleep(0.25)
+                    drawTitle()
+                    time.sleep(0.25)
+                    pygame.display.update()
                     x = 0
                     y = 0
                     selection = 1  # go to game selection
@@ -70,12 +76,19 @@ while True:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
                     pygame.display.update()
+                    titleNFT()
+                    pygame.display.update()
+                    time.sleep(0.25)
+                    drawTitle()
+                    time.sleep(0.25)
+                    pygame.display.update()
                     x = 0
                     y = 0
                     selection = 2  # go to nft page
                     print("going to NFTS")
 
     if selection == 1:  #####################SELECT SCREEN###################
+
         drawSelect()
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
@@ -120,14 +133,17 @@ while True:
                     print("going to worm")
 
     if selection == 2:
+        screen.fill(black)
         show_text("NFTS", 0, 0, white)
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
                 selection = 0
                 print("escape")
     if selection == 3:  ############################PING######################
+        pingSelect()
+        screen.fill(black)
+        pygame.display.update()
         while selection == 3:
-            screen.blit(escButton,(980,580))
             if p1scorep == 5:
                 screen.fill(black)
                 show_text("WINNER", 40, 10, white)
@@ -204,6 +220,9 @@ while True:
             yp = yp + ychangep
 
     if selection == 4:  ######################PASTRY ACTUATOR########################
+        pastrySelect()
+        screen.fill(black)
+        pygame.display.update()
         pygame.mixer.pre_init()
         pygame.mixer.music.load("Music/bangarang.mp3")
         pygame.mixer.music.play(-1)
