@@ -11,6 +11,7 @@ orange = (255, 165, 0)
 colors = [pink, blue, green]
 pygame.init()
 screen = pygame.display.set_mode((1000, 600))
+escButton = pygame.image.load("Logo/esc.png")
 
 ##########PING VARS#################
 xp = 300
@@ -126,6 +127,7 @@ while True:
                 print("escape")
     if selection == 3:  ############################PING######################
         while selection == 3:
+            screen.blit(escButton,(980,580))
             if p1scorep == 5:
                 screen.fill(black)
                 show_text("WINNER", 40, 10, white)

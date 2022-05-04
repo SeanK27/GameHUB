@@ -19,6 +19,7 @@ pygame.display.set_caption("window")
 titleLogo = pygame.image.load("Logo/titleLogo.png")
 playButton = pygame.image.load("Logo/play.png")
 nftButton = pygame.image.load("Logo/nft.png")
+escButton = pygame.image.load("Logo/esc.png")
 
 pingLogo = pygame.image.load("Logo/ping.png")
 aimLogo = pygame.image.load("Logo/aim.png")
@@ -49,8 +50,8 @@ def drawTitle():
 def drawSelect():
   screen.fill(black)
   screen.blit(titleLogo, (250, 30))
-  pygame.draw.rect(screen,white,(20,20,100,35),1)
-  
+
+  screen.blit(escButton,(20,20))
   screen.blit(pingLogo, (143,270))
   screen.blit(aimLogo, (143,400))
   screen.blit(pastryLogo, (572,270))
