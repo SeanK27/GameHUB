@@ -61,12 +61,11 @@ while True:
                 if 333 <= x <= 666 and 266 <= y <= 366:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
-                    pygame.display.update()
                     titlePlay()
                     pygame.display.update()
                     time.sleep(0.25)
                     drawTitle()
-                    time.sleep(0.25)
+                    time.sleep(0.1)
                     pygame.display.update()
                     x = 0
                     y = 0
@@ -75,12 +74,11 @@ while True:
                 if 333 <= x <= 666 and 430 <= y <= 530:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
-                    pygame.display.update()
                     titleNFT()
                     pygame.display.update()
                     time.sleep(0.25)
                     drawTitle()
-                    time.sleep(0.25)
+                    time.sleep(0.1)
                     pygame.display.update()
                     x = 0
                     y = 0
@@ -101,7 +99,6 @@ while True:
                 # print("y:"+str(y))
                 if 143 <= x <= 429 and 270 <= y <= 370:
                     pygame.mixer.Sound.play(click)
-                    screen.fill(black)
                     pygame.display.update()
                     x = 0
                     y = 0
@@ -117,7 +114,6 @@ while True:
                     print("going to skaavok")
                 if 572 <= x <= 858 and 270 <= y <= 370:
                     pygame.mixer.Sound.play(click)
-                    screen.fill(black)
                     pygame.display.update()
                     x = 0
                     y = 0
