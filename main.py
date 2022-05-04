@@ -46,7 +46,7 @@ def show_text(msg, xp, yp, color):
 
 while True:
     pygame.display.update()
-    if selection == 0:  ###################TITLE###########################
+    if selection == 0:  ###################TITLE###################
         drawTitle()
         pygame.display.update()
         for event in pygame.event.get():
