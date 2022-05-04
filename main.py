@@ -86,7 +86,6 @@ while True:
                     print("going to NFTS")
 
     if selection == 1:  #####################SELECT SCREEN###################
-
         drawSelect()
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
@@ -164,6 +163,10 @@ while True:
                 if event.type == KEYDOWN:
                     if event.key == K_ESCAPE:
                         selection = 0
+                        pygame.mixer.pre_init()
+                        pygame.mixer.music.load("Music/GloriousSound.mp3")
+                        pygame.mixer.music.play(-1)
+                        print("escape")
                     if event.key == K_w:
                         acp = -2
                     if event.key == K_DOWN:
@@ -230,6 +233,9 @@ while True:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
                     selection = 0
+                    pygame.mixer.pre_init()
+                    pygame.mixer.music.load("Music/GloriousSound.mp3")
+                    pygame.mixer.music.play(-1)
                     print("escape")
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                     xa, ya = event.pos
@@ -250,10 +256,16 @@ while True:
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
                 selection = 0
+                pygame.mixer.pre_init()
+                pygame.mixer.music.load("Music/GloriousSound.mp3")
+                pygame.mixer.music.play(-1)
                 print("escape")
     if selection == 6:  #####################WORM#####################
         show_text("worm", 0, 0, white)
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
                 selection = 0
+                pygame.mixer.pre_init()
+                pygame.mixer.music.load("Music/GloriousSound.mp3")
+                pygame.mixer.music.play(-1)
                 print("escape")
