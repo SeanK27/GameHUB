@@ -41,19 +41,88 @@ def drawTitle():
   screen.blit(playButton, (333,266))
   screen.blit(nftButton, (333,430))
   screen.blit(titleLogo, (250, 30))
-
-  ##asthetics
-
-  
   pygame.display.update()
+
+def titlePlay():
+  pygame.display.set_caption("window")
+  screen.blit(playButton, (338, 271))
+  screen.blit(nftButton, (333, 430))
+  screen.blit(titleLogo, (250, 30))
+  pygame.display.update()
+
+def titleNFT():
+  screen.fill(black)
+  pygame.display.set_caption("window")
+  screen.blit(playButton, (333, 266))
+  screen.blit(nftButton, (338, 435))
+  screen.blit(titleLogo, (250, 30))
+  pygame.display.update()
+
 
 def drawSelect():
   screen.fill(black)
   screen.blit(titleLogo, (250, 30))
-
   screen.blit(escButton,(20,20))
   screen.blit(pingLogo, (143,270))
   screen.blit(aimLogo, (143,400))
   screen.blit(pastryLogo, (572,270))
   screen.blit(wormLogo, (572,400))
   pygame.display.update()
+
+
+def pingSelect():
+  screen.fill(black)
+  screen.blit(titleLogo, (250, 30))
+  screen.blit(escButton,(20,20))
+  screen.blit(pingLogo, (148,275))
+  screen.blit(aimLogo, (143,400))
+  screen.blit(pastryLogo, (572,270))
+  screen.blit(wormLogo, (572,400))
+  pygame.display.update()
+  time.sleep(0.25)
+  drawSelect()
+  pygame.display.update()
+  time.sleep(0.25)
+
+
+def pastrySelect():
+  screen.fill(black)
+  screen.blit(titleLogo, (250, 30))
+  screen.blit(escButton,(20,20))
+  screen.blit(pingLogo, (143,270))
+  screen.blit(aimLogo, (143,400))
+  screen.blit(pastryLogo, (577,275))
+  screen.blit(wormLogo, (572,400))
+  pygame.display.update()
+  time.sleep(0.25)
+  drawSelect()
+  pygame.display.update()
+  time.sleep(0.25)
+
+def aimSelect():
+  screen.fill(black)
+  screen.blit(titleLogo, (250, 30))
+  screen.blit(escButton,(20,20))
+  screen.blit(pingLogo, (143,270))
+  screen.blit(aimLogo, (148,405))
+  screen.blit(pastryLogo, (572,270))
+  screen.blit(wormLogo, (572,400))
+  pygame.display.update()
+  time.sleep(0.25)
+  drawSelect()
+  pygame.display.update()
+  time.sleep(0.25)
+
+def wormSelect():
+  screen.fill(black)
+  screen.blit(titleLogo, (250, 30))
+  screen.blit(escButton,(20,20))
+  screen.blit(pingLogo, (143,270))
+  screen.blit(aimLogo, (143,400))
+  screen.blit(pastryLogo, (572,270))
+  screen.blit(wormLogo, (577,405))
+  pygame.display.update()
+  time.sleep(0.25)
+  drawSelect()
+  pygame.display.update()
+  time.sleep(0.25)

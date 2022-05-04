@@ -1,7 +1,7 @@
 import pygame
 
 from Title import *
-
+#test
 pink = (255, 200, 200)
 blue = (0, 0, 255)
 green = (0, 255, 0)
@@ -61,6 +61,11 @@ while True:
                 if 333 <= x <= 666 and 266 <= y <= 366:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
+                    titlePlay()
+                    pygame.display.update()
+                    time.sleep(0.25)
+                    drawTitle()
+                    time.sleep(0.1)
                     pygame.display.update()
                     x = 0
                     y = 0
@@ -69,6 +74,11 @@ while True:
                 if 333 <= x <= 666 and 430 <= y <= 530:
                     pygame.mixer.Sound.play(click)
                     screen.fill(black)
+                    titleNFT()
+                    pygame.display.update()
+                    time.sleep(0.25)
+                    drawTitle()
+                    time.sleep(0.1)
                     pygame.display.update()
                     x = 0
                     y = 0
@@ -76,6 +86,7 @@ while True:
                     print("going to NFTS")
 
     if selection == 1:  #####################SELECT SCREEN###################
+
         drawSelect()
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
@@ -88,7 +99,6 @@ while True:
                 # print("y:"+str(y))
                 if 143 <= x <= 429 and 270 <= y <= 370:
                     pygame.mixer.Sound.play(click)
-                    screen.fill(black)
                     pygame.display.update()
                     x = 0
                     y = 0
@@ -104,7 +114,6 @@ while True:
                     print("going to skaavok")
                 if 572 <= x <= 858 and 270 <= y <= 370:
                     pygame.mixer.Sound.play(click)
-                    screen.fill(black)
                     pygame.display.update()
                     x = 0
                     y = 0
@@ -120,14 +129,17 @@ while True:
                     print("going to worm")
 
     if selection == 2:
+        screen.fill(black)
         show_text("NFTS", 0, 0, white)
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == K_ESCAPE:
                 selection = 0
                 print("escape")
     if selection == 3:  ############################PING######################
+        pingSelect()
+        screen.fill(black)
+        pygame.display.update()
         while selection == 3:
-            screen.blit(escButton,(980,580))
             if p1scorep == 5:
                 screen.fill(black)
                 show_text("WINNER", 40, 10, white)
@@ -204,6 +216,9 @@ while True:
             yp = yp + ychangep
 
     if selection == 4:  ######################PASTRY ACTUATOR########################
+        pastrySelect()
+        screen.fill(black)
+        pygame.display.update()
         pygame.mixer.pre_init()
         pygame.mixer.music.load("Music/bangarang.mp3")
         pygame.mixer.music.play(-1)
