@@ -3,4 +3,4 @@ pyproject.toml
 sheet/
 __pycache__/
 .breakpoints
-.idea
+.idea/
