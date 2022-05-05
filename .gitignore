@@ -1,5 +1,3 @@
-poetry.lock
-pyproject.toml
 sheet/
 __pycache__/
 .breakpoints
